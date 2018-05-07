@@ -1,7 +1,0 @@
-E:\Code\job\quartznet-2.6.1\build\4.0\Release\Quartz\Quartz.dll
-E:\Code\job\quartznet-2.6.1\build\4.0\Release\Quartz\Quartz.pdb
-E:\Code\job\quartznet-2.6.1\build\4.0\Release\Quartz\Quartz.xml
-E:\Code\job\quartznet-2.6.1\src\Quartz\obj\Release\Quartz.dll
-E:\Code\job\quartznet-2.6.1\src\Quartz\obj\Release\Quartz.pdb
-E:\Code\job\quartznet-2.6.1\src\Quartz\obj\Release\Quartz.2010.csproj.CoreCompileInputs.cache
-E:\Code\job\quartznet-2.6.1\src\Quartz\obj\Release\Quartz.2010.csproj.CopyComplete
