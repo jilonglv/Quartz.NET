@@ -379,7 +379,7 @@ namespace Quartz.Impl.AdoJobStore
         protected virtual ConnectionAndTransactionHolder GetConnection()
         {
             IDbConnection conn;
-            IDbTransaction tx;
+            IDbTransaction tx=null;
             try
             {
                 conn = ConnectionManager.GetConnection(DataSource);
@@ -395,23 +395,23 @@ namespace Quartz.Impl.AdoJobStore
                 throw new JobPersistenceException(string.Format("Could not get connection from DataSource '{0}'", DataSource));
             }
 
-            try
-            {
-                if (TxIsolationLevelSerializable)
-                {
-                    tx = conn.BeginTransaction(IsolationLevel.Serializable);
-                }
-                else
-                {
-                    // default
-                    tx = conn.BeginTransaction(IsolationLevel.ReadCommitted);
-                }
-            }
-            catch (Exception e)
-            {
-                conn.Close();
-                throw new JobPersistenceException("Failure setting up connection.", e);
-            }
+            //try
+            //{
+            //    if (TxIsolationLevelSerializable)
+            //    {
+            //        tx = conn.BeginTransaction(IsolationLevel.Serializable);
+            //    }
+            //    else
+            //    {
+            //        // default
+            //        tx = conn.BeginTransaction(IsolationLevel.ReadCommitted);
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    conn.Close();
+            //    throw new JobPersistenceException("Failure setting up connection.", e);
+            //}
 
             return new ConnectionAndTransactionHolder(conn, tx);
         }

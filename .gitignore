@@ -21,3 +21,4 @@ obj/Release/Quartz.dll
 obj/Release/Quartz.pdb
 *.cache
 packages.config
+Quartz.2010.csproj.user

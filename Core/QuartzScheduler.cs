@@ -1901,8 +1901,7 @@ namespace Quartz.Core
                 }
                 catch (Exception e)
                 {
-                    log.Error("Error while notifying SchedulerListener of error: ", e);
-                    log.Error("  Original error (for notification) was: " + msg, se);
+                    log.Error("Error while notifying SchedulerListener of error: {0} Original error (for notification) was: {1}" + msg,e, se);
                 }
             }
         }
@@ -1925,7 +1924,7 @@ namespace Quartz.Core
                 }
                 catch (Exception e)
                 {
-                    log.Error(string.Format(CultureInfo.InvariantCulture, "Error while notifying SchedulerListener of scheduled job. Trigger={0}", trigger.Key), e);
+                    log.Error(CultureInfo.InvariantCulture, "Error while notifying SchedulerListener of scheduled job. Trigger={0}:{1}", trigger.Key, e);
                 }
             }
         }
