@@ -49,7 +49,7 @@
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">../../</SolutionDir>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <OutputPath>..\..\..\..\..\Bandex\TMC\Trunk\src\bin\Debug\</OutputPath>
+    <OutputPath>..\..\..\bin\Debug\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -71,7 +71,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <OutputPath>../../build/4.0/Release/Quartz/</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
@@ -525,7 +525,7 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>if "$(ConfigurationName)"=="Release" copy $(TargetPath) E:\Library\3rdLibs\dotNet\Quartz\
-if "$(ConfigurationName)"=="Release" copy $(TargetDir)C5.dll E:\Library\3rdLibs\dotNet\Quartz\</PostBuildEvent>
+    <PostBuildEvent>REM if "$(ConfigurationName)"=="Release" copy $(TargetPath) E:\Library\3rdLibs\dotNet\Quartz\
+REM if "$(ConfigurationName)"=="Release" copy $(TargetDir)C5.dll E:\Library\3rdLibs\dotNet\Quartz\</PostBuildEvent>
   </PropertyGroup>
 </Project>
